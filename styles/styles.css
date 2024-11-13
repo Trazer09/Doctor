@@ -11,13 +11,25 @@ html,body {
 }
 
 #nav{
+   
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: space-between;
     padding: 20px 50px;
+    position: fixed;
 }
 
 #nav-right{
     display: flex;
     gap: 50px;
+}
+
+#page1{
+    height: 100%;
+    width: 100%;
+}
+
+#page2{
+    height: 100%;
+    width: 100%;
 }
