@@ -10,18 +10,54 @@ html,body {
     width: 100%;
 }
 
-#nav{
+/* #nav{
    
     display: flex;
     align-items: top;
     justify-content: space-between;
     padding: 20px 50px;
     position: fixed;
+} */
+
+#name{
+    display: flex;             /* Makes the container a flex container */
+    align-items: center;   
 }
+
+#name img {
+    width: 50px;               /* Set a specific width for the image */
+    height: auto;              /* Maintain the aspect ratio of the image */
+    margin-right: 10px;        /* Add space between the image and the text */
+}
+
+#name h2 {
+    margin: 0;                 /* Remove default margin from <h2> */
+    
+    font-weight: 700;
+    font-style: normal;
+}
+
+#nav {
+    display: flex;
+    align-items: center;       /* Center vertically */
+    justify-content: space-between;
+    padding: 20px 50px;
+    position: fixed;           /* Fix navbar to the top of the viewport */
+    top: 0;                    /* Make sure it's anchored to the top */
+    left: 0;
+    width: 100%;               /* Stretch the navbar across the page */
+    background-color: white;   /* Add a background color to prevent content underneath from being visible */
+    z-index: 1000;             /* Ensure it stays above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visibility */
+}
+
 
 #nav-right{
     display: flex;
     gap: 50px;
+}
+#nav-right h4{
+    font-weight: 400;
 }
 
 #page1{
