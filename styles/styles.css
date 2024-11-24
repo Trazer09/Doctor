@@ -1,71 +1,168 @@
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: 'Gilroy', sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy', sans-serif;
 }
-   
-html,body {
+
+html, body {
     height: 100%;
     width: 100%;
+    background-color: #f0f4ff;
 }
 
-/* #nav{
-   
+#name {
     display: flex;
-    align-items: top;
-    justify-content: space-between;
-    padding: 20px 50px;
-    position: fixed;
-} */
-
-#name{
-    display: flex;             /* Makes the container a flex container */
-    align-items: center;   
+    align-items: center;
 }
 
 #name img {
-    width: 50px;               /* Set a specific width for the image */
-    height: auto;              /* Maintain the aspect ratio of the image */
-    margin-right: 10px;        /* Add space between the image and the text */
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    color:
 }
 
+
+
+.btn {
+  border: none; /* Remove any default borders */
+  background-color: #007BFF; /* Blue background */
+  color: #fff; /* White text */
+  padding: 10px 20px; /* Add space inside the button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  font-size: 16px; /* Font size for readability */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
 #name h2 {
-    margin: 0;                 /* Remove default margin from <h2> */
-    
+    margin: 0;
     font-weight: 700;
     font-style: normal;
+    color: white;
 }
 
 #nav {
     display: flex;
-    align-items: center;       /* Center vertically */
+    align-items: center;
     justify-content: space-between;
     padding: 20px 50px;
-    position: fixed;           /* Fix navbar to the top of the viewport */
-    top: 0;                    /* Make sure it's anchored to the top */
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;               /* Stretch the navbar across the page */
-    background-color: white;   /* Add a background color to prevent content underneath from being visible */
-    z-index: 1000;             /* Ensure it stays above other elements */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visibility */
+    width: 100%;
+    background-color: #007BFF;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 80px; /* Define height explicitly */
 }
 
-
-#nav-right{
+#nav-right {
     display: flex;
     gap: 50px;
+    color: white;
 }
-#nav-right h4{
+
+#nav-right h4 {
     font-weight: 400;
 }
 
-#page1{
+#page1 {
+    height: 100%;
+    width: 100%;
+    padding-top: 100px; /* Adjust to navbar height */
+    
+}
+
+
+#page2 {
     height: 100%;
     width: 100%;
 }
 
-#page2{
-    height: 100%;
-    width: 100%;
+.container{
+    display: flex;
+    align-items: center; /* Vertically aligns items */
+  justify-content: space-between; /* Adds space between the text and the image */
+  justify-content: center;
+  padding: 80px; 
 }
+
+.container-text{
+    flex: 1; 
+    margin-right: 20px; /* Adds space between text and image */
+  
+}
+
+.container-text h1{
+    
+        font-size: 4rem; /* Adjust heading size */
+        margin-bottom: 10px;
+      
+}
+
+.container-text h2{
+    font-size: 2rem; /* Adjust paragraph size */
+  line-height: 1.5; /* Improve readability */
+}
+
+.container-image {
+    flex: 1; /* Allow image section to take up as much space as needed */
+    display: flex; /* Centers the image within its container */
+    justify-content: center; /* Centers the image horizontally */
+  }
+
+  
+.container-image img {
+  width: 500px; /* Set the desired width */
+  height: 500px; /* Set the desired height, must be equal to width for a perfect circle */
+  border-radius: 50%; /* Makes the image circular */
+  overflow: hidden; /* Ensures content stays inside the circle */
+  object-fit: cover; /* Ensures the image covers the circular area */
+  }
+
+  
+  
+
+  /* Animation part on page homepage */
+  
+  
+  .container-animated-text {
+    margin-top: 30px; /* Adds space above the container */
+    font-size: 22px;
+}
+
+
+  .animated-info {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 250px;
+    position: relative;
+  }
+  
+  .animated-item {
+    display: block;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  
+ 
+
+  
+
+
+/* Apply blue color to the animated text */
+.animated-info .animated-item {
+    color: #007BFF;  /* Change 'blue' to any shade you prefer, e.g., #007bff for a specific blue */
+}
+
+
