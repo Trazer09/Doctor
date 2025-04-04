@@ -1,0 +1,20 @@
+/* Style for form-container to center the form */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f7fa; /* Light background for a modern feel */
+    padding: 20px;
+  }
+  
+  /* Custom styles for the card form */
+  .card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: none; /* Remove shadow for a flatter look */
+    width: 100%;
+    max-width: 400px;
+  }
+  
