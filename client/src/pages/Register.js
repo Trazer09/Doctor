@@ -20,7 +20,7 @@ const Register = () => {
     <Form layout="vertical" onFinish={onFinishHandler}   className='card'>
 
 
-    <h1>Register Form</h1>
+    <h3>Register Form</h3>
 <Form.Item label="Name" name = "name">
 
 <Input type = "text" required />
@@ -36,7 +36,7 @@ const Register = () => {
 <Input type = "password" required />
 </Form.Item>
 
-<Link to='/login' className=''>Login here</Link>
+<Link to='/login'>Login here</Link>
 
 <button className="bt btn-primary" type="submit" >Register </button>
 
