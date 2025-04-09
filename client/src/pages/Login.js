@@ -1,12 +1,31 @@
 import React from 'react'
 import '../styles/RegisterStyles.css'
-import {Form, Input} from 'antd'
-import { Link } from 'react-router-dom'
+import {Form, Input, message} from 'antd'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 const Login = () => {
-    const onFinishHandler = (values) => {
-        console.log(values);
-      };
+
+  const navigate = useNavigate()
+
+    const onFinishHandler = async(values) => {
+      try {
+        const res = await axios.post('/api/v1/user/login', values); // Sending a POST request with login credentials.
+    
+        // Backend checks the user and responds with success/failure and a token if successful.
+        if (res.data.success) {
+          localStorage.setItem("token", res.data.token); // Save the token in localStorage for later use.
+          message.success("Login Successfully"); // Display success message.
+          navigate('/'); // Redirect to the homepage.
+        } else {
+          message.error(res.data.message); // Display error message from backend if login fails.
+        }
+    
+      } catch (error) {
+        console.log(error); // Log any error that occurs.
+        message.error('Something went wrong'); // Display a general error message.
+      }
+    };
       
 
 return (

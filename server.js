@@ -19,14 +19,9 @@ app.use(express.json())   //helps in parsing the json data , request body data c
 app.use(morgan('dev'))
 
 //routes
-app.get('/', (req,res) =>{
 
-res.status(200).send({
-message: "server running"
+app.use('/api/v1/user', require("./routes/userRoutes"));
 
-})
-}
-)
 
 
 // port
