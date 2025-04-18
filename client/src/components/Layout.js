@@ -16,15 +16,40 @@ const Layout = ({ children }) => {
     navigate("/login");
   };
 
+  // =========== doctor menu ===============
+  const doctorMenu = [
+    {
+      name: "Home",
+      path: "/",
+      icon: "fa-solid fa-house",
+    },
+    {
+      name: "Appointments",
+      path: "/doctor-appointments",
+      icon: "fa-solid fa-list",
+    },
+
+    {
+      name: "Profile",
+      path: `/doctor/profile/${user?._id}`,
+      icon: "fa-solid fa-user",
+    },
+  ];
+  // =========== doctor menu ===============
+
   // redering menu list
-  const SidebarMenu = user?.isAdmin ? adminMenu : userMenu;
+  const SidebarMenu = user?.isAdmin
+    ? adminMenu
+    : user?.isDoctor
+    ? doctorMenu
+    : userMenu;
   return (
     <>
       <div className="main">
         <div className="layout">
           <div className="sidebar">
             <div className="logo">
-              <h6>DOC APP</h6>
+              <h6 className="text-light">DOC APP</h6>
               <hr />
             </div>
             <div className="menu">
@@ -47,8 +72,13 @@ const Layout = ({ children }) => {
           </div>
           <div className="content">
             <div className="header">
-              <div className="header-content">
-              <Badge count={user?.notification?.length || 0}>
+              <div className="header-content" style={{ cursor: "pointer" }}>
+                <Badge
+                  count={user && user.notifcation.length}
+                  onClick={() => {
+                    navigate("/notification");
+                  }}
+                >
                   <i class="fa-solid fa-bell"></i>
                 </Badge>
 
