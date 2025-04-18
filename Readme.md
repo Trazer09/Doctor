@@ -7,7 +7,6 @@ Follow the steps below to set up and run the project locally.
 
 ### 1. Clone the Repository
 
-```bash
 git clone https://github.com/Trazer09/Doctor.git
 
 2. Install Dependencies
